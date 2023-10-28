@@ -9,7 +9,7 @@ const Component = () => {
     const [data, setData] = useState([])
     const [query, setQuery] = useState('')
 
-    const datas = axios.get('https://sore-plum-elephant-ring.cyclic.app/api/admin').then((res) => {
+    const datas = axios.get('https://weary-loincloth-toad.cyclic.app/api/admin').then((res) => {
         console.log(res.data);
         console.log(datas);
         setData(res.data)
@@ -19,14 +19,14 @@ const Component = () => {
     return (
         <section className='flex flex-col justify-center items-center gap-6 p-6 bg-gray-950/75 min-h-[100vh]'>
             <div className='flex items-center'>
-                <input
+                {/* <input
                     type="search"
                     name="search"
                     id="search"
                     placeholder='Search....'
                     onChange={(e)=> setQuery(e.target.value)}
                     className='bg-slate-200/60 border-none focus:border-slate-500 rounded-md h-[40px] w-[300px] p-4 text-black' />
-                <AiOutlineSearch className='text-[34px] font-[600] text-gray-950 -translate-x-10' />
+                <AiOutlineSearch className='text-[34px] font-[600] text-gray-950 -translate-x-10' /> */}
             </div>
             {
                 data.filter((entry)=>entry.name.toLowerCase().includes(query) ).map((entry) => {
