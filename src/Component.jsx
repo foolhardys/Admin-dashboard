@@ -9,7 +9,7 @@ const Component = () => {
     const [data, setData] = useState([])
     const [query, setQuery] = useState('')
 
-    const datas = axios.get('https://weary-loincloth-toad.cyclic.app/api/admin').then((res) => {
+    const datas = axios.get('https://encouraging-cow-cuff.cyclic.app/api/admin').then((res) => {
         console.log(res.data);
         console.log(datas);
         setData(res.data)
